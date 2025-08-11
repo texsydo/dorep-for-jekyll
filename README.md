@@ -12,7 +12,8 @@
 
 [![GitHub Release](https://mathswe-ops-services.tobiasbriones-dev.workers.dev/badge/version/github/texsydo/dorep-jekyll)](https://github.com/texsydo/dorep-jekyll/releases/latest)
 
-Documenting representation of textual systems as a Jekyll static website.
+Representing a textual system document as a static website generated with
+Jekyll.
 
 ## Generating a Jekyll Static Website
 
@@ -37,7 +38,8 @@ Tobias Briones: [GitHub](https://github.com/tobiasbriones)
 
 **DoRep Jekyll**
 
-Documenting representation of textual systems as a Jekyll static website.
+Representing a textual system document as a static website generated with
+Jekyll.
 
 Copyright © 2023–2025 Tobias Briones. All rights reserved.
 
