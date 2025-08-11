@@ -25,7 +25,7 @@ Tobias Briones: [GitHub](https://github.com/tobiasbriones)
 
 Documenting representation of textual systems as a Jekyll static website.
 
-Copyright © 2022–2025 Tobias Briones. All rights reserved.
+Copyright © 2023–2025 Tobias Briones. All rights reserved.
 
 ### License
 
