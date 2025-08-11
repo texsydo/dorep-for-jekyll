@@ -12,7 +12,22 @@
 
 [![GitHub Release](https://mathswe-ops-services.tobiasbriones-dev.workers.dev/badge/version/github/texsydo/dorep-jekyll)](https://github.com/texsydo/dorep-jekyll/releases/latest)
 
-Documenting representation of textual systems as a Jekyll static website.
+Representing a textual system document as a static website generated with
+Jekyll.
+
+## Generating a Jekyll Static Website
+
+Usage: `gradlew run --args="build {src} {dst}"`.
+
+The program doesn't require installation or deployment, so it's just enough to
+run it directly via `gradlew` since it's meant to be a script rather than an
+app.
+
+### Testing Settings
+
+For testing the app, use the dirs [test/src](test/src) and [test/dst](test/dst).
+
+Usage: `gradlew run --args="build test/src test/dst"`.
 
 ## Contact
 
@@ -23,9 +38,10 @@ Tobias Briones: [GitHub](https://github.com/tobiasbriones)
 
 **DoRep Jekyll**
 
-Documenting representation of textual systems as a Jekyll static website.
+Representing a textual system document as a static website generated with
+Jekyll.
 
-Copyright © 2022–2025 Tobias Briones. All rights reserved.
+Copyright © 2023–2025 Tobias Briones. All rights reserved.
 
 ### License
 
