@@ -14,6 +14,10 @@
 
 Documenting representation of textual systems as a Jekyll static website.
 
+## Generating a Jekyll Static Website
+
+`gradlew run --args="build {src} {dst}"`.
+
 ## Contact
 
 Tobias Briones: [GitHub](https://github.com/tobiasbriones)
