@@ -16,7 +16,17 @@ Documenting representation of textual systems as a Jekyll static website.
 
 ## Generating a Jekyll Static Website
 
-`gradlew run --args="build {src} {dst}"`.
+Usage: `gradlew run --args="build {src} {dst}"`.
+
+The program doesn't require installation or deployment, so it's just enough to
+run it directly via `gradlew` since it's meant to be a script rather than an
+app.
+
+### Testing Settings
+
+For testing the app, use the dirs [test/src](test/src) and [test/dst](test/dst).
+
+Usage: `gradlew run --args="build test/src test/dst"`.
 
 ## Contact
 
