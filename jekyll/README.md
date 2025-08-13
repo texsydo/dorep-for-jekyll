@@ -14,3 +14,14 @@ the Jekyll site:
 
 - `README.md` of the user project.
 - `LICENSE` of the user project (there can be many).
+
+## Running the Static Site
+
+It's recommended to use Linux, where you'll need to install Ruby, and the
+project [Gemfile](Gemfile). The `bundle` tool will run Jekyll commands.
+
+- `bundle exec jekyll clean`
+- `bundle exec jekyll build`
+- `bundle exec jekyll serve`
+
+Distribution files go to [_site](_site).
