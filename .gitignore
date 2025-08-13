@@ -5,3 +5,5 @@ build/
 !**/src/test/**/build/
 
 .kotlin/
+
+jekyll/_site
