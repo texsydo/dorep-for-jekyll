@@ -1,0 +1,51 @@
+{% if page.permalink and site.data.site_meta.base_href_enabled %}
+<base href="/{{ page.permalink | replace: '.html', '' }}/"/>
+{% endif %}
+
+<meta name="robots" content="{{ site.data.site_meta.robots_content }}">
+<meta property="og:type" content="{{ site.data.site_meta.og_type }}">
+<meta name="author" content="{{ site.data.site_meta.author }}">
+<meta name="twitter:creator" content="{{ site.data.site_meta.twitter.creator }}">
+<meta name="twitter:site" content="{{ site.data.site_meta.twitter.site }}">
+<meta name="twitter:card" content="{{ site.data.site_meta.twitter.card }}">
+
+{% if page.title %}<title>{{ page.title }}</title>{% endif %}
+
+{% if page.description %}
+<meta name="description" content="{{ page.description }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta property="og:description" content="{{ page.description }}">
+{% endif %}
+
+{% if page.ogimage %}
+<meta property="og:image" content="{{ page.ogimage }}">
+<meta property="twitter:image" content="{{ page.ogimage }}">
+{% endif %}
+
+<link href="{{ site.data.site_meta.bootstrap.css.href }}" rel="stylesheet"
+      integrity="{{ site.data.site_meta.bootstrap.css.integrity }}"
+      crossorigin="{{ site.data.site_meta.bootstrap.css.crossorigin }}">
+<script src="{{ site.data.site_meta.bootstrap.js.src }}"
+        integrity="{{ site.data.site_meta.bootstrap.js.integrity }}"
+        crossorigin="{{ site.data.site_meta.bootstrap.js.crossorigin }}"></script>
+
+{% for url in site.data.site_meta.fonts.preconnect %}
+<link rel="preconnect" href="{{ url }}"{% if url contains 'gstatic' %} crossorigin{% endif %}>
+{% endfor %}
+{% for font_url in site.data.site_meta.fonts.stylesheets %}
+<link href="{{ font_url }}" rel="stylesheet">
+{% endfor %}
+
+<script id="{{ site.data.site_meta.mathjax.id }}" async="{{ site.data.site_meta.mathjax.async }}"
+        src="{{ site.data.site_meta.mathjax.src }}"></script>
+<script type="text/x-mathjax-config">
+    {{ site.data.site_meta.mathjax.config }}
+</script>
+
+<script src="{{ site.data.site_meta.fontawesome.src }}"
+        data-auto-replace-svg="{{ site.data.site_meta.fontawesome.data_auto_replace_svg }}"></script>
+
+<link rel="stylesheet" href="{{ site.data.site_meta.material_symbols.href }}">
+
+<link rel="stylesheet" href="{{ site.data.site_meta.local_assets.css }}">
+<script src="{{ site.data.site_meta.local_assets.js }}" defer></script>

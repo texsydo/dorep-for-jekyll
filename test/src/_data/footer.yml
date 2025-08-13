@@ -1,0 +1,38 @@
+menu_include: menu.html
+
+sections:
+  - title: "MSW Engineer"
+    type: links
+    links:
+      - { text: "Engineer", url: "https://mathsoftware.engineer" }
+      - { text: "Dev", url: "https://dev.mathsoftware.engineer" }
+      - { text: "Blog", url: "https://blog.mathsoftware.engineer" }
+      - { text: "About Me", url: "https://me.mathsoftware.engineer" }
+
+  - title: "Tobias Briones"
+    type: social
+    follow_text: "Follow me for more original content:"
+    social:
+      - { name: "github", url: "https://github.com/tobiasbriones", icon: "fab fa-github" }
+      - { name: "linkedin", url: "https://www.linkedin.com/in/tobiasbriones", icon: "fab fa-linkedin" }
+      - { name: "twitter", url: "https://twitter.com/tobiasbriones_", icon: "fab fa-twitter" }
+      - { name: "mastodon", url: "https://mastodon.social/@tobiasbriones", icon: "fab fa-mastodon" }
+      - { name: "youtube", url: "https://www.youtube.com/@mathsoftwareengineer2772", icon: "fab fa-youtube" }
+
+  - title: "Legal"
+    type: legal
+    subtitle: "Blog | mathsoftware.engineer"
+    copyright: "Copyright © 2021-2023 Tobias Briones. All rights reserved."
+    notices:
+      - label: "Content"
+        text: "licensed under the"
+        link_text: "CC-BY-4.0 License"
+        link_url: "https://github.com/tobiasbriones/blog/blob/main/LICENSE-CC"
+      - label: "Code"
+        text: "licensed under the"
+        link_text: "BSD-3-Clause License"
+        link_url: "https://github.com/tobiasbriones/blog/blob/main/LICENSE-BSD"
+      - label: "Third-party"
+        text: "content is available under their respective source, copyright, and/or license. See"
+        link_text: "NOTICE"
+        link_url: "https://github.com/tobiasbriones/blog/blob/main/NOTICE.md"
