@@ -49,3 +49,7 @@ material_symbols:
 local_assets:
   css: "/assets/css/styles.css"
   js: "/assets/js/main.js"
+
+google_analytics:
+  enabled: false
+  id: ""
