@@ -1,5 +1,5 @@
 // Copyright (c) 2023-2025 Tobias Briones. All rights reserved.
 // SPDX-License-Identifier: BSD-3-Clause
-// This file is part of https://github.com/texsydo/dorep-jekyll
+// This file is part of https://github.com/texsydo/dorep-for-jekyll
 
-rootProject.name = "dorep-jekyll"
+rootProject.name = "dorep-for-jekyll"
