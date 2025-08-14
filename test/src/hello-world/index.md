@@ -1,3 +1,10 @@
+---
+permalink: hello-world
+title: "Hello World"
+description: "Testing, Jekyll"
+ogimage: ""
+---
+
 # Hello World
 
 Testing DocRep for Jekyll.

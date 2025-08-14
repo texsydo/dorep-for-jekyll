@@ -7,3 +7,5 @@ build/
 .kotlin/
 
 jekyll/_site
+
+test/dst
