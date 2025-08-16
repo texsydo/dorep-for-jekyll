@@ -17,7 +17,23 @@ import java.nio.file.Path
 import java.nio.file.StandardCopyOption
 import java.util.*
 import java.util.stream.Stream
+import kotlin.io.path.Path
+import kotlin.io.path.absolute
 import kotlin.io.path.name
+
+enum class AppInstallation {
+    Dev,
+    Prod,
+}
+
+fun getRootAbsPath() = Path("").absolute()
+
+fun resolveAppInstallation(): AppInstallation {
+    val rootPath = getRootAbsPath()
+
+    return if (rootPath.name == "bin") AppInstallation.Prod
+    else AppInstallation.Dev
+}
 
 fun copyDirectory(
     sourceDir: Path,
