@@ -41,3 +41,13 @@ tasks.withType<KotlinCompile> {
         jvmTarget.set(JvmTarget.JVM_21)
     }
 }
+
+distributions {
+    main {
+        contents {
+            from("$rootDir/jekyll") {
+                into("jekyll")
+            }
+        }
+    }
+}

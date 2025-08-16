@@ -6,17 +6,17 @@ package software.math.tsd.jekyll.jekyll
 
 import arrow.core.Either
 import arrow.core.left
-import software.math.tsd.jekyll.copyDirectory
-import software.math.tsd.jekyll.runCommand
+import software.math.tsd.jekyll.*
 import java.io.IOException
 import java.nio.file.Path
-import kotlin.io.path.Path
 
 data class JekyllOutput(val dst: Path)
 
 fun JekyllOutput.copyJekyllRootFiles(): Either<String, Unit> = try {
+    val jekyllPath = resolveJekyllDirectory()
+
     copyDirectory(
-        Path("jekyll"),
+        jekyllPath,
         dst,
     )
 }
@@ -42,3 +42,11 @@ fun JekyllOutput.jekyllBuild(): Either<String, String> = runCommand(
     "bundle exec jekyll build",
     dst
 )
+
+private fun resolveJekyllDirectory() = when (resolveAppInstallation()) {
+    // Root project
+    AppInstallation.Dev  -> getRootAbsPath().resolve("jekyll")
+
+    // dorep-for-jekyll/bin, files are in dorep-for-jekyll/jekyll
+    AppInstallation.Prod -> getRootAbsPath().parent.resolve("jekyll")
+}
