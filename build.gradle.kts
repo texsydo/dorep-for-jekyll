@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "software.math.tsd.jekyll"
-version = "0.1.0-dev"
+version = "0.1.0"
 
 application {
     mainClass = "software.math.tsd.jekyll.DoRepJekyllKt"
