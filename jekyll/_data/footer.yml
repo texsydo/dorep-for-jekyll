@@ -1,0 +1,36 @@
+menu_include: menu.html
+
+sections:
+  - title: "Title"
+    type: links
+    links:
+      - { text: "Page 1", url: "#" }
+      - { text: "Page 2", url: "#" }
+
+  - title: "Name"
+    type: social
+    follow_text: "Follow me for more original content:"
+    social:
+      - { name: "github", url: "https://github.com/", icon: "fab fa-github" }
+      - { name: "linkedin", url: "https://www.linkedin.com/in/", icon: "fab fa-linkedin" }
+      - { name: "twitter", url: "https://twitter.com/", icon: "fab fa-twitter" }
+      - { name: "mastodon", url: "https://mastodon.social/", icon: "fab fa-mastodon" }
+      - { name: "youtube", url: "https://www.youtube.com/", icon: "fab fa-youtube" }
+
+  - title: "Legal"
+    type: legal
+    subtitle: "Place"
+    copyright: "Copyright ©"
+    notices:
+      - label: "Content"
+        text: "licensed under the"
+        link_text: "{} License"
+        link_url: "https://github.com/{}/blob/main/LICENSE"
+      - label: "Code"
+        text: "licensed under the"
+        link_text: "{} License"
+        link_url: "https://github.com/{}/blob/main/LICENSE"
+      - label: "Third-party"
+        text: "content is available under their respective source, copyright, and/or license. See"
+        link_text: "NOTICE"
+        link_url: "https://github.com/{}/blob/main/NOTICE.md"

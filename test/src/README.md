@@ -23,20 +23,11 @@ The program doesn't require installation or deployment, so it's just enough to
 run it directly via `gradlew` since it's meant to be a script rather than an
 app.
 
-### Preferred Deployment Approach
-
-For a more formal execution of the Kotlin script, build the distribution 
-with Gradle and run the binary from the `build` directory.
-
-- `./gradlew installDist`
-- `cd build/install/dorep-for-jekyll/bin`
-- `./dorep-for-jekyll build {src} {dst}`
-
 ### Testing Settings
 
 For testing the app, use the dirs [test/src](test/src) and [test/dst](test/dst).
 
-Usage: `./gradlew run --args="build test/src test/dst"`.
+Usage: `gradlew run --args="build test/src test/dst"`.
 
 ## Contact
 

@@ -1,0 +1,167 @@
+// Copyright (c) 2023-2025 Tobias Briones. All rights reserved.
+// SPDX-License-Identifier: BSD-3-Clause
+// This file is part of https://github.com/texsydo/dorep-for-jekyll
+
+@import "default";
+@import "header";
+@import "footer";
+@import "toc";
+@import "snippet";
+@import "carousel";
+@import "menu";
+@import "table";
+@import "social";
+
+:root {
+  --content-background-color: #fff;
+  --title-text-color: #212121;
+  --content-text-color: #424242;
+  --secondary-text-color: #616161;
+  --third-text-color: #757575;
+  --accent-color: #607d8b;
+  --hover-background-color: #f5f5f5;
+  --accent-blue-text-color: #1565c0;
+}
+
+:root {
+  --content-padding: 5%;
+  --nav-height: 4rem;
+}
+
+body {
+  background-color: var(--content-background-color);
+  color: var(--content-text-color);
+}
+
+section.main {
+  position: relative;
+  margin-bottom: 25vh;
+}
+
+article {
+  padding: var(--content-padding);
+}
+
+h1, h2, h3, h4, h5, figcaption {
+  font-weight: bold;
+  color: var(--title-text-color);
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+.pr-subtitle {
+  margin-top: -0.75rem;
+  font-size: 0.875rem;
+  color: var(--secondary-text-color);
+}
+
+figcaption {
+  text-align: center;
+}
+
+a {
+  color: var(--accent-blue-text-color);
+}
+
+.footnotes p {
+  color: var(--secondary-text-color);
+}
+
+blockquote {
+  padding: 0 1rem;
+  border-left: 1px solid #e0e0e0;
+}
+
+blockquote p:not(:last-child) {
+  color: var(--third-text-color);
+}
+
+p img,
+figure img,
+figure video {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 1rem;
+}
+
+video {
+  min-width: 60%;
+}
+
+img ~ figcaption,
+video ~ figcaption,
+div.a16-9 ~ figcaption {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+h1 + figure > figcaption {
+  border: none;
+}
+
+figure > div.a16-9 {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #e0e0e0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+figure > div.a16-9 > img {
+  border: none;
+}
+
+.show {
+  opacity: 1;
+}
+
+@media screen and (min-width: 720px) {
+  :root {
+    --content-padding: 4vw;
+  }
+
+  section.main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  section.main {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  :root {
+    --content-padding: 2vw;
+  }
+
+  section.main {
+    width: 40%;
+    margin-top: 4rem;
+    z-index: 3;
+  }
+
+  article {
+    padding-top: 0.125rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  nav a {
+    padding: 0.5rem 2rem;
+  }
+}

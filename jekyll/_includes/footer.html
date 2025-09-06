@@ -1,0 +1,39 @@
+{% include {{ site.data.footer.menu_include }} %}
+
+<div class="nav row">
+    {% for section in site.data.footer.sections %}
+    <section class="col-6{% if section.type == 'legal' %} col-12 legal{% endif %}">
+        <h5>{{ section.title }}</h5>
+
+        {% if section.type == 'links' %}
+        <ul>
+            {% for link in section.links %}
+            <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+            {% endfor %}
+        </ul>
+
+        {% elsif section.type == 'social' %}
+        <div class="social my-2">
+            <div>{{ section.follow_text }}</div>
+            {% for s in section.social %}
+            <a class="btn btn-{{ s.name }}" href="{{ s.url }}" target="_blank">
+                <i class="{{ s.icon }}"></i>
+            </a>
+            {% endfor %}
+        </div>
+
+        {% elsif section.type == 'legal' %}
+        <h6>{{ section.subtitle }}</h6>
+        <p>{{ section.copyright }}</p>
+        <div class="notice">
+            {% for notice in section.notices %}
+            <p>
+                <b>{{ notice.label }}</b> {{ notice.text }}
+                <a href="{{ notice.link_url }}">{{ notice.link_text }}</a>.
+            </p>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </section>
+    {% endfor %}
+</div>
