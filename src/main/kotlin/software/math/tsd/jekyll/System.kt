@@ -91,6 +91,7 @@ fun deleteDirectoryRecursively(dir: Path) {
 fun runCommand(
     command: String,
     workingDir: Path? = null,
+    env: Map<String, String> = emptyMap(),
 ): Either<String, String> {
     val processBuilder = getProcessBuilder(command)
 
@@ -98,6 +99,7 @@ fun runCommand(
 
     if (workingDir != null) {
         processBuilder.directory(workingDir.toFile())
+        processBuilder.environment().putAll(env)
     }
 
     return try {
