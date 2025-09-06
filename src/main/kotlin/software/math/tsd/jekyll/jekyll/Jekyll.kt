@@ -39,8 +39,9 @@ catch (e: IOException) {
 }
 
 fun JekyllOutput.jekyllBuild(): Either<String, String> = runCommand(
-    "bundle exec jekyll build",
-    dst
+    "jekyll build",
+    dst,
+    getEnvVars(),
 )
 
 private fun resolveJekyllDirectory() = when (resolveAppInstallation()) {
@@ -49,4 +50,14 @@ private fun resolveJekyllDirectory() = when (resolveAppInstallation()) {
 
     // dorep-for-jekyll/bin, files are in dorep-for-jekyll/jekyll
     AppInstallation.Prod -> getRootAbsPath().parent.resolve("jekyll")
+}
+
+private fun getEnvVars(): Map<String, String> {
+    val userHome = System.getProperty("user.home")
+
+    return mapOf(
+        "PATH" to "$userHome/gems/bin:${System.getenv("PATH")}",
+        "GEM_HOME" to "$userHome/gems",
+        "PAGES_REPO_NWO" to "texsydo/dorep-for-jekyll"
+    )
 }
