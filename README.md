@@ -36,7 +36,7 @@ with Gradle and run the binary from the `build` directory.
 
 For testing the app, use the dirs [test/src](test/src) and [test/dst](test/dst).
 
-Usage: `gradlew run --args="build test/src test/dst"`.
+Usage: `./gradlew run --args="build test/src test/dst"`.
 
 ## Contact
 
